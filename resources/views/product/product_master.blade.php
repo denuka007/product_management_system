@@ -15,22 +15,17 @@
 </head>
 
 <body>
-    <div class="container mt-5 ms-4 me-4">
-        <div class="card">
-            <div class="card-header">
-                <nav class="navbar navbar-light bg-info">
-                    <div class="container-fluid">
-                        <a class="navbar-brand">Product Management</a>
-                        <div class="d-flex input-group w-auto">
-                            <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
-                            <a href="{{ route('register') }}" class="btn btn-success ms-2">Register</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="card-body d-flex justify-content-center">
-                <h1>Welcome to Product Management System</h1>
-            </div>
+
+    <div class="card mt-5 ms-4 me-4">
+        <div class="card-header">
+            <!-- Navbar -->
+            @include('layouts.productinc.navbar')
+            <!-- Navbar -->
+        </div>
+        <div class="card-body">
+            <!-- content here -->
+            @yield('content')
+            <!-- content here -->
         </div>
     </div>
 
